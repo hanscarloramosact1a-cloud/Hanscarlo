@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+
+body{background:linear-gradient(135deg,#020617,#0f172a);color:#fff;transition:.3s}
+body.light{background:#f1f5f9;color:#111}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:rgba(0,0,0,.6);position:sticky;top:0;z-index:100}
+body.light nav{background:#fff}
+
+nav h1{color:#22c55e}
+
+.menu{display:flex;gap:15px;flex-wrap:wrap}
+.menu a{text-decoration:none;color:#fff;font-size:14px}
+body.light .menu a{color:#111}
+.menu a.active{color:#22c55e;font-weight:bold}
+
+.hamburger{display:none;font-size:22px;cursor:pointer}
+
+.toggle{cursor:pointer;background:#22c55e;border:none;padding:6px 10px;border-radius:6px}
+
+.hero{text-align:center;padding:50px 20px}
+.hero img{width:140px;border-radius:50%;border:3px solid #22c55e}
+.hero h2{margin-top:15px}
+
+section{padding:40px 20px;opacity:0;transform:translateY(40px);transition:.6s}
+section.show{opacity:1;transform:translateY(0)}
+
+h2{margin-bottom:20px;color:#22c55e}
+
+.card{background:rgba(255,255,255,.05);padding:20px;border-radius:15px;margin-bottom:20px;backdrop-filter:blur(10px);transition:.3s}
+body.light .card{background:#fff}
+.card:hover{transform:translateY(-5px);box-shadow:0 0 15px #22c55e}
+
+.skills span{display:inline-block;background:#22c55e;color:#000;padding:6px 12px;margin:5px;border-radius:10px}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px;border:2px solid #22c55e}
+
+footer{text-align:center;padding:20px;color:#94a3b8}
+
+@media(max-width:768px){
+.menu{position:absolute;top:60px;right:0;background:#020617;width:200px;flex-direction:column;display:none;padding:15px}
+.menu.show{display:flex}
+.hamburger{display:block}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>My Portfolio</h1>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+<div class="menu" id="menu">
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#work">Work</a>
+<a href="#seminars">Seminars</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+</div>
+<button class="toggle" onclick="toggleTheme()">🌙</button>
+</nav>
+
+<div class="hero">
+<img src="hanscarloooooo.jpg">
+<h2>Hans Carlo N. Ramos</h2>
+<p>IS Student | Web Developer | Tech Enthusiast</p>
+</div>
+
+<div class="card">
+<p>A 19-year-old kid passionate about technology, system development, and innovation. I build web systems and Arduino projects while continuously improving my skills in programming, networking, and databases.</p>
+</div>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<div class="card" style="text-align:center">
+
+<p style="font-size:18px;">📞 +63 953 800 5220</p>
+<p style="font-size:18px;">📧 Email: carlohans323@gmail.com</p>
+
+<br>
+
+<a href="https://t.me/Carlohans323" target="_blank">
+<button style="padding:10px 15px;margin:5px;background:#22c55e;border:none;border-radius:8px;cursor:pointer;">
+💬 Telegram
+</button>
+</a>
+
+<a href="https://www.facebook.com/hanscarlo.hanscarlo/" target="_blank">
+<button style="padding:10px 15px;margin:5px;background:#3b82f6;border:none;border-radius:8px;cursor:pointer;color:white;">
+📘 Facebook
+</button>
+</a>
+
+<br><br>
+
+<a href="cv.pdf" download>
+<button style="padding:10px 15px;background:#f59e0b;border:none;border-radius:8px;cursor:pointer;">
+💼 Download CV
+</button>
+</a>
+
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="card"><h3>Associate in Computer Technology</h3><p>Bulacan Polytechnic College</p><p>2024 - Present</p></div>
+<div class="card"><h3>Senior High School</h3><p>Calumpit National High School</p><p>2022 - 2024</p><p>With Honor</p></div>
+<div class="card"><h3>High School</h3><p>Calumpit National High School</p><p>2018 - 2022</p><p>Consistent Honor</p></div>
+<div class="card"><h3>Elementary School</h3><p>Bio Kinetics Learning School</p><p>2013 - 2018</p><p>Consistent Honor</p></div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="card skills">
+<span>HTML</span><span>CSS</span><span>JavaScript</span><span>Arduino</span><span>Networking</span>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="card"><h3>Cemetery Management System</h3><p>System for managing burial plots and records.</p></div>
+<div class="card"><h3>Arduino Sensor Alarm</h3><p>Detects distance and triggers buzzer.</p></div>
+<div class="card"><h3>Temperature System</h3><p>Real-time monitoring.</p></div>
+<div class="card"><h3>Laboratory System</h3><p>Tracks usage.</p></div>
+<div class="card"><h3>Online Ordering System</h3><p>E-commerce concept.</p></div>
+</section>
+
+<section id="work">
+<h2>Work Experience</h2>
+<div class="card"><h3>OJT</h3><p>Calumpit District Hospital</p><p>2025 - 2026</p></div>
+<div class="card"><h3>Freelance</h3><p>2024 - Present</p></div>
+<div class="card"><h3>RLV Bike Shop</h3><p>2022-2023</p></div>
+</section>
+
+<section id="seminars">
+<h2>Seminars</h2>
+<div class="card"><p>DICT 2024</p></div>
+<div class="card"><p>iRcite 2024</p></div>
+<div class="card"><p>Web Dev 2025</p></div>
+<div class="card"><p>Cybersecurity 2024</p></div>
+</section>
+
+<section id="">
+<h2>Achievements</h2>
+<div class="card"><p></p>
+<div class="gallery" id="gallery"></div>
+</div>
+</section>
+
+<footer>© 2026 Hans Carlo N. Ramos | IT Portfolio</footer>
+
+<a href="tel:+639538005220"
+style="position:fixed;bottom:20px;right:20px;background:#22c55e;color:black;
+padding:15px;border-radius:50%;font-size:20px;text-decoration:none;box-shadow:0 0 10px #22c55e;">
+📞
+</a>
+
+<script>
+function toggleMenu(){document.getElementById("menu").classList.toggle("show")}
+function toggleTheme(){document.body.classList.toggle("light")}
+
+
+const images = [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg"
+];
+
+const gallery = document.getElementById("gallery");
+
+images.forEach(src=>{
+  const img = document.createElement("img");
+  img.src = src;
+  gallery.appendChild(img);
+});
+
+const sections=document.querySelectorAll("section")
+const navLinks=document.querySelectorAll(".menu a")
+
+window.addEventListener("scroll",()=>{
+let current=""
+sections.forEach(sec=>{
+const top=window.scrollY
+const offset=sec.offsetTop-120
+const height=sec.offsetHeight
+if(top>=offset&&top<offset+height){current=sec.id}
+if(top>=offset){sec.classList.add("show")}
+})
+navLinks.forEach(link=>{
+link.classList.remove("active")
+if(link.getAttribute("href").includes(current)){link.classList.add("active")}
+})
+})
+</script>
+
+</body>
+</html>
