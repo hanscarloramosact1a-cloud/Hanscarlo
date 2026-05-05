@@ -43,14 +43,12 @@ body.light .card{background:#fff}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
 .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px;border:2px solid #22c55e}
 
-/* PROJECT CLICK SHOW (MOBILE FRIENDLY) */
 .project img{
   width:100%;
   margin-top:10px;
   border-radius:10px;
   display:none;
 }
-
 .project.open img{
   display:block;
 }
@@ -153,8 +151,8 @@ footer{text-align:center;padding:20px;color:#94a3b8}
 </div>
 
 <div class="card project">
-<h3>Database Calculator using xampp</h3>
-<p>Calculate addition, Subtraction, Multiplication, and division database</p>
+<h3>Database Calculator using XAMPP</h3>
+<p>Calculate addition, subtraction, multiplication, and division database</p>
 <img src="7.jpg">
 </div>
 
@@ -195,6 +193,7 @@ footer{text-align:center;padding:20px;color:#94a3b8}
   <p>Assisted customers and handled bike maintenance
 </p>Managed shop tools and inventory<p>year: 2022-2023</p></div>
 </section>
+
 <section id="seminars">
 <h2>Seminars</h2>
 <div class="card"><p><p>IRCITE 2024
@@ -213,6 +212,7 @@ Location: Bulacan State University</p></div>
 <p>Duration: 1 Day </p>
 <P>Conductor: Apex</P>
 <p>Location: Virtual Seminar </p></div>
+</section>
 
 <section id="achievements">
 <h2>Achievements</h2>
@@ -233,12 +233,17 @@ padding:15px;border-radius:50%;font-size:20px;text-decoration:none;box-shadow:0 
 function toggleMenu(){document.getElementById("menu").classList.toggle("show")}
 function toggleTheme(){document.body.classList.toggle("light")}
 
-const images=["1.jpg","2.jpg","3.jpg","4.jpg"];
+const images=["1.jpg","2.jpg","3.jpg","4.jpg", "123.jpg"];
 const gallery=document.getElementById("gallery");
+
 images.forEach(src=>{
   const img=document.createElement("img");
   img.src=src;
   gallery.appendChild(img);
+});
+
+document.querySelectorAll(".project").forEach(p=>{
+  p.addEventListener("click",()=>p.classList.toggle("open"));
 });
 
 const sections=document.querySelectorAll("section");
@@ -260,12 +265,6 @@ if(link.getAttribute("href").includes(current)){
 link.classList.add("active");
 }
 });
-});
-
-document.querySelectorAll(".project").forEach(project=>{
-  project.addEventListener("click",()=>{
-    project.classList.toggle("open");
-  });
 });
 </script>
 
