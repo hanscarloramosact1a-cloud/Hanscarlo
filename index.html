@@ -43,6 +43,16 @@ body.light .card{background:#fff}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
 .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px;border:2px solid #22c55e}
 
+.project img{
+  width:100%;
+  margin-top:10px;
+  border-radius:10px;
+  display:none;
+}
+.project:hover img{
+  display:block;
+}
+
 footer{text-align:center;padding:20px;color:#94a3b8}
 
 @media(max-width:768px){
@@ -71,13 +81,16 @@ footer{text-align:center;padding:20px;color:#94a3b8}
 </nav>
 
 <div class="hero">
-<img src="hanscarloooooo.jpg">
+<img src="hanscarlo.jpg">
 <h2>Hans Carlo N. Ramos</h2>
 <p>IS Student | Web Developer | Tech Enthusiast</p>
 </div>
 
 <div class="card">
-<p>A 19-year-old kid passionate about technology, system development, and innovation. I build web systems and Arduino projects while continuously improving my skills in programming, networking, and databases.</p>
+<p>A 19-year-old passionate about technology, system development, and innovation.</p>
+  <p> I build web systems and Arduino projects while continuously improving my skills in programming, networking, and databases.</p>
+   <p>I enjoy creating efficient and user-friendly solutions that solve real problems and improve everyday processes.</p>
+   <p>I developed attention to detail, organization, and responsibility in handling records.</p>
 </div>
 
 <section id="contact">
@@ -85,7 +98,8 @@ footer{text-align:center;padding:20px;color:#94a3b8}
 <div class="card" style="text-align:center">
 
 <p style="font-size:18px;">📞 +63 953 800 5220</p>
-<p style="font-size:18px;">📧 Email: carlohans323@gmail.com</p>
+<p style="font-size:18px;">📧  carlohans323@gmail.com</p>
+<p style="font-size:18px;">📧  hanscarloramos.act1a@gmail.com</p>
 
 <br>
 
@@ -129,26 +143,76 @@ footer{text-align:center;padding:20px;color:#94a3b8}
 
 <section id="projects">
 <h2>Projects</h2>
-<div class="card"><h3>Cemetery Management System</h3><p>System for managing burial plots and records.</p></div>
-<div class="card"><h3>Arduino Sensor Alarm</h3><p>Detects distance and triggers buzzer.</p></div>
-<div class="card"><h3>Temperature System</h3><p>Real-time monitoring.</p></div>
-<div class="card"><h3>Laboratory System</h3><p>Tracks usage.</p></div>
-<div class="card"><h3>Online Ordering System</h3><p>E-commerce concept.</p></div>
+
+<div class="card project">
+<h3>Cemetery Management System</h3>
+<p>System for managing burial plots and records.</p>
+<img src="8.jpg">
+</div>
+
+<div class="card project">
+<h3>Database Calculator using xampp</h3>
+<p>Detects distance and triggers buzzer.</p>
+<img src="7.jpg">
+</div>
+
+<div class="card project">
+<h3>Temperature System Using Arduino</h3>
+<p>Real-time monitoring.</p>
+<img src="0953.jpg">
+</div>
+
+<div class="card project">
+<h3>University Management System</h3>
+<p>Track Student Information.</p>
+<img src="9.jpg">
+</div>
+
+<div class="card project">
+<h3>Online Ordering System</h3>
+<p>E-commerce concept.</p>
+<img src="11.jpg">
+</div>
+
 </section>
 
 <section id="work">
 <h2>Work Experience</h2>
-<div class="card"><h3>OJT</h3><p>Calumpit District Hospital</p><p>2025 - 2026</p></div>
-<div class="card"><h3>Freelance</h3><p>2024 - Present</p></div>
-<div class="card"><h3>RLV Bike Shop</h3><p>2022-2023</p></div>
+<div class="card"><h3>Internship – Administration Office (Calumpit District Hospital)</h3>
+  <p>Completed an internship at Calumpit District Hospital under the Administration Office,</p>
+  <p>assisting in clerical tasks, data entry, and database management.</p>
+  <p>Responsible for encoding, organizing, and updating records while ensuring accuracy and confidentiality of hospital data.</p>
+    <p> Gained experience in office workflow, documentation, and basic administrative support in a healthcare setting.</p>
+    <p>2025 - 2026</p></div>
+<div class="card"><h3>Freelance Website Maker</h3>
+  <p>I design and develop modern, responsive, and user-friendly</p>
+    <p>websites such as portfolios, landing pages, and business sites using HTML, CSS, and JavaScript.</p>
+   <p> I focus on clean design, performance, and mobile compatibility to deliver a great user experience.</p>
+   <p>2024 - Present</p></div>
+<div class="card"><h3>RLVS Bike Shop</h3>
+  <p>Assisted customers and handled bike maintenance
+</p>Managed shop tools and inventory<p>year: 2022-2023</p></div>
 </section>
 
 <section id="seminars">
 <h2>Seminars</h2>
-<div class="card"><p>DICT 2024</p></div>
-<div class="card"><p>iRcite 2024</p></div>
-<div class="card"><p>Web Dev 2025</p></div>
-<div class="card"><p>Cybersecurity 2024</p></div>
+<div class="card"><p><p>IRCITE 2024
+ <p>Dration: 1 day </p>
+<p>Conductor: Dr. Jonilo C. Mababa</p>
+Location: Bulacan State University</p></div>
+<div class="card"><p></p>DICT 2024</P>
+<p>Duration: 1 Day</p>
+<p>Conductor: DICT</p>
+<p> City of Malolos</p></div>
+<div class="card"><p>Web Development 2025</p>
+<p>Duration: 1 Day</p>
+<p>Conductor: DICT</p>
+<p>Location: Virtual Seminar</p></div>
+<div class="card"><p>Apex Cybersecurity 2026</p>
+<p>Duration: 1 Day </p>
+<P>Conductor: Apex</P>
+<p>Location: Virtual Seminar </p></div>
+
 </section>
 
 <section id="">
@@ -170,14 +234,7 @@ padding:15px;border-radius:50%;font-size:20px;text-decoration:none;box-shadow:0 
 function toggleMenu(){document.getElementById("menu").classList.toggle("show")}
 function toggleTheme(){document.body.classList.toggle("light")}
 
-
-const images = [
-  "1.jpg",
-  "2.jpg",
-  "3.jpg",
-  "4.jpg"
-];
-
+const images = ["1.jpg","2.jpg","3.jpg","4.jpg"];
 const gallery = document.getElementById("gallery");
 
 images.forEach(src=>{
