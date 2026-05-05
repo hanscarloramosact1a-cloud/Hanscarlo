@@ -260,14 +260,9 @@ images.forEach(src=>{
 });
 
 document.querySelectorAll(".project").forEach(p=>{
-  p.addEventListener("click", (e) => {
-    e.preventDefault();
+  p.addEventListener("click", ()=>{
     p.classList.toggle("open");
   });
-
-  p.addEventListener("touchstart", (e) => {
-    p.classList.toggle("open");
-  }, { passive: true });
 });
 
 const sections = document.querySelectorAll("section");
@@ -299,7 +294,7 @@ function revealSections(){
 }
 
 window.addEventListener("scroll", revealSections);
-window.addEventListener("load", revealSections); // 🔥 IMPORTANT FIX
+window.addEventListener("load", revealSections); 
 </script>
 
 </body>
