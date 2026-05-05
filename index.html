@@ -243,7 +243,14 @@ images.forEach(src=>{
 });
 
 document.querySelectorAll(".project").forEach(p=>{
-  p.addEventListener("click",()=>p.classList.toggle("open"));
+  p.addEventListener("click", (e) => {
+    e.preventDefault();
+    p.classList.toggle("open");
+  });
+
+  p.addEventListener("touchstart", (e) => {
+    p.classList.toggle("open");
+  }, { passive: true });
 });
 
 const sections=document.querySelectorAll("section");
